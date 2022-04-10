@@ -25,6 +25,14 @@ development:
   database: blog_development
   username: <%= ENV['DATABASE_USER_NAME'] %>
   password: <%= ENV['DATABASE_USER_PASSWORD'] %>
+  secret_key_base: <%= Rails.application.secret_key_base %>
+
+staging:
+  <<: *default
+  database: blog_development
+  username: <%= ENV['DATABASE_USER_NAME'] %>
+  password: <%= ENV['DATABASE_USER_PASSWORD'] %>
+  secret_key_base: <%= Rails.application.secret_key_base %>
 
 test:
   <<: *default
